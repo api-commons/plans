@@ -1,0 +1,36 @@
+---
+- id: starter
+  name: Starter
+  description: The default API access plan, where every new account begins, allowing the consumer to kick the tires, and see what the API is all about.
+  entries:
+    - label: API calls
+      description: to the search API
+      metric: calls
+      limit: 25
+      timeFrame: day
+      geo: US
+      unit: 1
+      price: "Free"
+  elements:
+    - name: Free
+    - name: Self Service Support
+    - name: Easiest to Start
+    - name: No commitment
+
+- id: verified
+  name: Verified
+  description: Once you have added a credit card as part of the account billing, you become a verified API consumer, and have a higher rate limit for usage.
+  entries:
+    - label: API calls
+      description: to the search API
+      metric: calls
+      limit: Pay As You Go
+      timeFrame: day
+      geo: US   
+      unit: 1
+      price: ".0025"
+  elements:
+    - name: Paid
+    - name: Paid Support
+    - name: Security
+    - name: Service Level Agreement (SLA)

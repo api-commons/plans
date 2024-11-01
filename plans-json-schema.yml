@@ -1,5 +1,5 @@
 ---
-"$schema": http://json-schema.org/020-12/schema#
+"$schema": http://json-schema.org/2020-12/schema#
 type: array
 title: Plans
 description: This is a schema for defining the plans associated with API consumption, providing a machine-readable way to describe plans, pricing, rate limiting, and other features.

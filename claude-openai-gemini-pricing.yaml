@@ -1,0 +1,920 @@
+# Pricing
+# These are the plans for Claude, OpenAI, and Gemini, providing a machine-readdable version of the plans for the API.
+
+"$schema": https://json-schema.org/draft/2020-12/schema
+title: Generated schema for Root
+type: object
+properties:
+  id:
+    type: string
+  name:
+    type: string
+  entries:
+    type: array
+    items:
+      type: object
+      properties:
+        geo:
+          type: string
+        unit:
+          type: number
+        label:
+          type: string
+        limit:
+          type: number
+        price:
+          type: string
+        metric:
+          type: string
+        timeFrame:
+          type: string
+        description:
+          type: string
+      required:
+      - geo
+      - unit
+      - label
+      - limit
+      - price
+      - metric
+      - timeFrame
+      - description
+  elements:
+    type: array
+    items:
+      type: object
+      properties:
+        name:
+          type: string
+      required:
+      - name
+  description:
+    type: string
+required:
+- id
+- name
+- entries
+- elements
+- description
+
+
+# Claude
+- name: Pricing
+  type: Pricing
+  url: https://www.anthropic.com/pricing#api
+  data:
+    - id: claude-opus-4-1
+      name: Claude Opus 4.1
+      type: Latest
+      entries:
+        - geo: US
+          unit: 1M
+          label: Input
+          price: 15
+          metric: token
+          timeFrame: usage
+          description: Input token usage-based pricing.
+        - geo: US
+          unit: 1M
+          label: Output
+          price: 75
+          metric: token
+          timeFrame: usage
+          description: Output token usage-based pricing.
+        - geo: US
+          unit: 1M
+          label: Read Prompt Caching
+          price: 1.5
+          metric: token
+          timeFrame: usage
+          description: Read prompt caching for model.
+        - geo: US
+          unit: 1M
+          label: Write Prompt Caching
+          price: 18.75
+          metric: token
+          timeFrame: usage
+          description: Write prompt caching for model.
+      description: Most intelligent model for complex tasks
+    - id: claude-sonnet-4
+      name: Claude Sonnet 4
+      type: Latest
+      entries:
+        - geo: US
+          unit: 1M
+          label: Prompts Input < 200K
+          price: 3
+          metric: token
+          maximum: 200000
+          timeFrame: usage
+          description: Input token less than 200K token usage-based pricing.
+        - geo: US
+          unit: 1M
+          label: Prompts Input > 200K
+          price: 6
+          metric: token
+          minimum: 200000
+          timeFrame: usage
+          description: Input token greater than 200K token usage-based pricing.
+        - geo: US
+          unit: 1M
+          label: Prompts Output < 200K
+          price: 15
+          metric: token
+          maximum: 200000
+          timeFrame: usage
+          description: Output token less than 200k usage-based pricing.
+        - geo: US
+          unit: 1M
+          label: Prompts Output > 200K
+          price: 22.5
+          metric: token
+          minimum: 200000
+          timeFrame: usage
+          description: Output token greater than 200k usage-based pricing.
+        - geo: US
+          unit: 1M
+          label: Read Prompt Caching < 200K
+          price: 0.3
+          metric: token
+          maximum: 200000
+          timeFrame: usage
+          description: Read prompt caching for less than 200K tokens model.
+        - geo: US
+          unit: 1M
+          label: Read Prompt Caching > 200K
+          price: 0.6
+          metric: token
+          minimum: 200000
+          timeFrame: usage
+          description: Read prompt caching for greater than 200K tokens model.
+        - geo: US
+          unit: 1M
+          label: Write Prompt Caching < 200K
+          price: 3.75
+          metric: token
+          maximum: 200000
+          timeFrame: usage
+          description: Write prompt caching for less than 200K tokens model.
+        - geo: US
+          unit: 1M
+          label: Write Prompt Caching > 200K
+          price: 7.5
+          metric: token
+          minimum: 200000
+          timeFrame: usage
+          description: Write prompt caching for greater than 200K tokens model.
+      description: Optimal balance of intelligence, cost, and speed
+    - id: claude-haiku-3-5
+      name: Claude Haiku 3.5
+      type: Latest
+      entries:
+        - geo: US
+          unit: 1M
+          label: Input
+          price: 0.8
+          metric: token
+          timeFrame: usage
+          description: Input token usage-based pricing.
+        - geo: US
+          unit: 1M
+          label: Output
+          price: 4
+          metric: token
+          timeFrame: usage
+          description: Output token usage-based pricing.
+        - geo: US
+          unit: 1M
+          label: Read Prompt Caching
+          price: 0.08
+          metric: token
+          timeFrame: usage
+          description: Read prompt caching for model.
+        - geo: US
+          unit: 1M
+          label: Write Prompt Caching
+          price: 1
+          metric: token
+          timeFrame: usage
+          description: Write prompt caching for model.
+      description: Fastest, most cost-effective model.
+    - id: web-search
+      name: Web Search
+      type: Tools
+      entries:
+        - geo: US
+          unit: 1K
+          label: Searches
+          price: 10
+          metric: search
+          timeFrame: usage
+          description: Usage based search pricing.
+      description: >-
+        Give Claude access to the latest information from the web. Does not
+        include input and output tokens required to process requests.
+    - id: code-execution
+      name: Code Execution
+      type: Tools
+      entries:
+        - geo: US
+          unit: 1K
+          label: Per Hour Per Container
+          price: 0.05
+          metric: container
+          timeFrame: hour
+          description: Usage based for containers by hour.
+      description: >-
+        Run Python code in a sandboxed environment for advanced data analysis.
+        50 free hours of usage daily per organization.
+
+# OpenAI
+- name: Pricing
+  type: Pricing
+  description: this is the pricing for API usage across different models.
+  url: https://openai.com/api/pricing/
+  data:
+    - id: gpt-5
+      name: GPT-5
+      type: Flagship
+      entries:
+        - geo: US
+          unit: 1M
+          label: Input
+          price: 1.25
+          metric: token
+          timeFrame: usage
+          description: Input token usage-based pricing.
+        - geo: US
+          unit: 1M
+          label: Cached Input
+          price: 0.125
+          metric: token
+          timeFrame: usage
+          description: Cached input token usage-based pricing.
+        - geo: US
+          unit: 1M
+          label: Output
+          price: 10
+          metric: token
+          timeFrame: usage
+          description: Output token usage-based pricing.
+      description: The best model for coding and agentic tasks across industries.
+    - id: gpt-5-mini
+      name: GPT-5 mini
+      type: Flagship
+      entries:
+        - geo: US
+          unit: 1M
+          label: Input
+          price: 0.25
+          metric: token
+          timeFrame: usage
+          description: Input token usage-based pricing.
+        - geo: US
+          unit: 1M
+          label: Cached Input
+          price: 0.025
+          metric: token
+          timeFrame: usage
+          description: Cached input token usage-based pricing.
+        - geo: US
+          unit: 1M
+          label: Output
+          price: 2
+          metric: token
+          timeFrame: usage
+          description: Output token usage-based pricing.
+      description: A faster, cheaper version of GPT-5 for well-defined tasks.
+    - id: gpt-5-nano
+      name: GPT-5 nano
+      type: Flagship
+      entries:
+        - geo: US
+          unit: 1M
+          label: Input
+          price: 0.05
+          metric: token
+          timeFrame: usage
+          description: Input token usage-based pricing.
+        - geo: US
+          unit: 1M
+          label: Cached Input
+          price: 0.005
+          metric: token
+          timeFrame: usage
+          description: Cached input token usage-based pricing.
+        - geo: US
+          unit: 1M
+          label: Output
+          price: 0.4
+          metric: token
+          timeFrame: usage
+          description: Output token usage-based pricing.
+      description: >-
+        The fastest, cheapest version of GPT-5great for summarization and
+        classification tasks.
+    - id: gpt-4-1
+      name: GPT-4.1
+      type: Fine-Tuning
+      entries:
+        - geo: US
+          unit: 1M
+          label: Input
+          price: 3
+          metric: token
+          timeFrame: usage
+          description: Input token usage-based pricing.
+        - geo: US
+          unit: 1M
+          label: Cached Input
+          price: 0.75
+          metric: token
+          timeFrame: usage
+          description: Cached input token usage-based pricing.
+        - geo: US
+          unit: 1M
+          label: Output
+          price: 12
+          metric: token
+          timeFrame: usage
+          description: Output token usage-based pricing.
+        - geo: US
+          unit: 1M
+          label: Training
+          price: 25
+          metric: token
+          timeFrame: usage
+          description: Training token usage-based pricing.
+      description: No description.
+    - id: gpt-4-1-mini
+      name: GPT-4.1 mini
+      type: Fine-Tuning
+      entries:
+        - geo: US
+          unit: 1M
+          label: Input
+          price: 0.8
+          metric: token
+          timeFrame: usage
+          description: Input token usage-based pricing.
+        - geo: US
+          unit: 1M
+          label: Cached Input
+          price: 0.2
+          metric: token
+          timeFrame: usage
+          description: Cached input token usage-based pricing.
+        - geo: US
+          unit: 1M
+          label: Output
+          price: 3.2
+          metric: token
+          timeFrame: usage
+          description: Output token usage-based pricing.
+        - geo: US
+          unit: 1M
+          label: Training
+          price: 5
+          metric: token
+          timeFrame: usage
+          description: Training token usage-based pricing.
+      description: No description.
+    - id: gpt-4-1-nano
+      name: GPT-4.1 nano
+      type: Fine-Tuning
+      entries:
+        - geo: US
+          unit: 1M
+          label: Input
+          price: 0.2
+          metric: token
+          timeFrame: usage
+          description: Input token usage-based pricing.
+        - geo: US
+          unit: 1M
+          label: Cached Input
+          price: 0.05
+          metric: token
+          timeFrame: usage
+          description: Cached input token usage-based pricing.
+        - geo: US
+          unit: 1M
+          label: Output
+          price: 0.8
+          metric: token
+          timeFrame: usage
+          description: Output token usage-based pricing.
+        - geo: US
+          unit: 1M
+          label: Training
+          price: 1.5
+          metric: token
+          timeFrame: usage
+          description: Training token usage-based pricing.
+      description: No description.
+    - id: o4-mini
+      name: o4-mini
+      type: Fine-Tuning
+      entries:
+        - geo: US
+          unit: 1M
+          label: Input
+          price: 4
+          metric: token
+          timeFrame: usage
+          description: Input token usage-based pricing.
+        - geo: US
+          unit: 1M
+          label: Cached Input
+          price: 1
+          metric: token
+          timeFrame: usage
+          description: Cached input token usage-based pricing.
+        - geo: US
+          unit: 1M
+          label: Output
+          price: 16
+          metric: token
+          timeFrame: usage
+          description: Output token usage-based pricing.
+        - geo: US
+          unit: 1M
+          label: Training
+          price: 100
+          metric: token
+          timeFrame: usage
+          description: Training token usage-based pricing.
+      description: No description.
+
+# Gemini
+- url: https://www.anthropic.com/pricing#api
+  data:
+    - id: gemini-2-5-pro
+      name: Gemini 2.5 Pro
+      tier: Free
+      type: Latest
+      entries:
+        - geo: US
+          unit: 1M
+          label: Input
+          price: Free
+          metric: token
+          timeFrame: usage
+          description: Input token usage-based pricing.
+        - geo: US
+          unit: 1M
+          label: Output
+          price: Free
+          metric: token
+          timeFrame: usage
+          description: Output token usage-based pricing.
+        - geo: US
+          unit: 1M
+          label: Context Caching
+          price: Free
+          metric: token
+          timeFrame: usage
+          description: Read prompt caching for model.
+        - geo: US
+          unit: 1M
+          label: Google Search
+          price: Free
+          metric: token
+          timeFrame: usage
+          description: Grounding with Google search.
+      description: >-
+        Our state-of-the-art multipurpose model, which excels at coding and
+        complex reasoning tasks.
+    - id: gemini-2-5-pro
+      name: Gemini 2.5 Pro
+      tier: Paid
+      type: Latest
+      entries:
+        - geo: US
+          unit: 1M
+          label: Input
+          price: 1.25
+          metric: token
+          maximum: 200000
+          timeFrame: usage
+          description: Input token usage-based pricing.
+        - geo: US
+          unit: 1M
+          label: Input
+          price: 2.5
+          metric: token
+          minimum: 200000
+          timeFrame: usage
+          description: Input token usage-based pricing.
+        - geo: US
+          unit: 1M
+          label: Output
+          price: 10
+          metric: token
+          maximum: 200000
+          timeFrame: usage
+          description: Output token usage-based pricing.
+        - geo: US
+          unit: 1M
+          label: Output
+          price: 15
+          metric: token
+          minimum: 200000
+          timeFrame: usage
+          description: Output token usage-based pricing.
+        - geo: US
+          unit: 1M
+          label: Context Caching
+          price: 0.31
+          metric: token
+          maximum: 200000
+          timeFrame: usage
+          description: Context caching for up to 200K.
+        - geo: US
+          unit: 1M
+          label: Context Caching
+          price: 0.625
+          metric: token
+          minimum: 200000
+          timeFrame: usage
+          description: Context caching for over 200K.
+        - geo: US
+          unit: 1M
+          label: Cache Storage
+          price: 0.625
+          metric: token
+          timeFrame: hour
+          description: Caching storage.
+        - geo: US
+          unit: 100
+          label: Google Search
+          price: 35
+          metric: requests
+          timeFrame: usage
+          description: Grounding with Google search.
+      description: >-
+        Our state-of-the-art multipurpose model, which excels at coding and
+        complex reasoning tasks.
+    - id: gemini-2-5-flash-free
+      name: Gemini 2.5 Flash (Free)
+      tier: Free
+      type: Latest
+      entries:
+        - geo: US
+          unit: 1M
+          label: Input
+          price: Free
+          metric: token
+          timeFrame: usage
+          description: Input token usage-based pricing.
+        - geo: US
+          unit: 1M
+          label: Output
+          price: Free
+          metric: token
+          timeFrame: usage
+          description: Output token usage-based pricing.
+        - geo: US
+          unit: 1M
+          label: Context Caching
+          price: Free
+          metric: token
+          timeFrame: usage
+          description: Read prompt caching for model.
+        - geo: US
+          unit: 1M
+          label: Google Search
+          price: Free
+          metric: token
+          timeFrame: usage
+          description: Grounding with Google search.
+        - geo: US
+          unit: 1M
+          label: Live API
+          price: Free
+          metric: token
+          timeFrame: usage
+          description: Access to the live API.
+      description: Our first hybrid reasoning model which supports a 1M token context
+    - id: gemini-2-5-flash-paid
+      name: Gemini 2.5 Flash (Paid)
+      tier: Paid
+      type: Latest
+      entries:
+        - geo: US
+          unit: 1M
+          label: Input Text Image and Videos
+          price: 0.3
+          metric: token
+          timeFrame: usage
+          description: Text and Image Video
+        - geo: US
+          unit: 1M
+          label: Input Audio
+          price: 1
+          metric: token
+          timeFrame: usage
+          description: Audio Input
+        - geo: US
+          unit: 1M
+          label: Output
+          price: 2.5
+          metric: token
+          timeFrame: usage
+          description: Output token usage-based pricing.
+        - geo: US
+          unit: 1M
+          label: Context Caching Text Image and Video
+          price: 0.075
+          metric: token
+          timeFrame: usage
+          description: Context caching for text, images, and video.
+        - geo: US
+          unit: 1M
+          label: Context Caching for Audio
+          price: 0.25
+          metric: token
+          timeFrame: usage
+          description: Context caching for audio.
+        - geo: US
+          unit: 1M
+          label: Cache Storage
+          price: 1
+          metric: token
+          timeFrame: hour
+          description: Caching storage.
+        - geo: US
+          unit: 100
+          label: Google Search
+          price: 35
+          metric: requests
+          timeFrame: usage
+          description: Grounding with Google search.
+        - geo: US
+          unit: 1M
+          label: Live API Text Input
+          price: 0.5
+          metric: requests
+          timeFrame: usage
+          description: Live API Text Input
+        - geo: US
+          unit: 1M
+          label: Live API Audio Image Video Input
+          price: 3
+          metric: requests
+          timeFrame: usage
+          description: Live API Audio Image Video Input
+        - geo: US
+          unit: 1M
+          label: Live API Text Output
+          price: 2
+          metric: requests
+          timeFrame: usage
+          description: Live API Text Output
+        - geo: US
+          unit: 1M
+          label: Live API Audio Image Video Output
+          price: 12
+          metric: requests
+          timeFrame: usage
+          description: Live API Audio Output
+      description: Our first hybrid reasoning model which supports a 1M token context
+    - id: gemini-2-5-flash-lite-free
+      name: Gemini 2.5 Flash-Lite (Free)
+      tier: Free
+      type: Latest
+      entries:
+        - geo: US
+          unit: 1M
+          label: Input
+          price: Free
+          metric: token
+          timeFrame: usage
+          description: Input token usage-based pricing.
+        - geo: US
+          unit: 1M
+          label: Output
+          price: Free
+          metric: token
+          timeFrame: usage
+          description: Output token usage-based pricing.
+        - geo: US
+          unit: 1M
+          label: Context Caching
+          price: Free
+          metric: token
+          timeFrame: usage
+          description: Read prompt caching for model.
+        - geo: US
+          unit: 1M
+          label: Google Search
+          price: Free
+          metric: token
+          timeFrame: usage
+          description: Grounding with Google search.
+      description: Our smallest and most cost effective model, built for at scale usage.
+    - id: gemini-2-5-flash-lite-paid
+      name: Gemini 2.5 Flash-Lite (Paid)
+      tier: Paid
+      type: Latest
+      entries:
+        - geo: US
+          unit: 1M
+          label: Input Text Image and Videos
+          price: 0.1
+          metric: token
+          timeFrame: usage
+          description: Text and Image Video
+        - geo: US
+          unit: 1M
+          label: Input Audio
+          price: 0.3
+          metric: token
+          timeFrame: usage
+          description: Audio Input
+        - geo: US
+          unit: 1M
+          label: Output
+          price: 0.4
+          metric: token
+          timeFrame: usage
+          description: Output token usage-based pricing.
+        - geo: US
+          unit: 1M
+          label: Context Caching Text Image and Video
+          price: 0.025
+          metric: token
+          timeFrame: usage
+          description: Context caching for text, images, and video.
+        - geo: US
+          unit: 1M
+          label: Context Caching for Audio
+          price: 0.125
+          metric: token
+          timeFrame: usage
+          description: Context caching for audio.
+        - geo: US
+          unit: 1M
+          label: Cache Storage
+          price: 1
+          metric: token
+          timeFrame: hour
+          description: Caching storage.
+        - geo: US
+          unit: 100
+          label: Google Search
+          price: 35
+          metric: requests
+          timeFrame: usage
+          description: Grounding with Google search.
+      description: Our smallest and most cost effective model, built for at scale usage.
+    - id: gemini-2-5-flash-native-audio-free
+      name: Gemini 2.5 Flash Native Audio (Free)
+      tier: Free
+      type: Latest
+      entries:
+        - geo: US
+          unit: 1M
+          label: Input
+          price: Free
+          metric: token
+          timeFrame: usage
+          description: Input token usage-based pricing.
+        - geo: US
+          unit: 1M
+          label: Output
+          price: Free
+          metric: token
+          timeFrame: usage
+          description: Output token usage-based pricing.
+      description: >-
+        Our native audio models optimized for higher quality audio outputs
+        with better pacing, voice naturalness, verbosity, and mood.
+    - id: gemini-2-5-flash-native-audio-paid
+      name: Gemini 2.5 Flash Native Audio (Paid)
+      tier: Paid
+      type: Latest
+      entries:
+        - geo: US
+          unit: 1M
+          label: Input Text
+          price: 0.5
+          metric: token
+          timeFrame: usage
+          description: Input text.
+        - geo: US
+          unit: 1M
+          label: Input Audio
+          price: 3
+          metric: token
+          timeFrame: usage
+          description: Input audio.
+        - geo: US
+          unit: 1M
+          label: Output Text
+          price: 2
+          metric: token
+          timeFrame: usage
+          description: Output text.
+        - geo: US
+          unit: 1M
+          label: Output Audio
+          price: 12
+          metric: token
+          timeFrame: usage
+          description: Output audio.
+      description: >-
+        Our native audio models optimized for higher quality audio outputs
+        with better pacing, voice naturalness, verbosity, and mood.
+    - id: gemini-2-5-flash-preview-tts-free
+      name: Gemini 2.5 Flash Preview TTS (Free)
+      tier: Free
+      type: Latest
+      entries:
+        - geo: US
+          unit: 1M
+          label: Input
+          price: Free
+          metric: token
+          timeFrame: usage
+          description: Input token usage-based pricing.
+        - geo: US
+          unit: 1M
+          label: Output
+          price: Free
+          metric: token
+          timeFrame: usage
+          description: Output token usage-based pricing.
+      description: >-
+        Our 2.5 Flash text-to-speech audio model optimized for
+        price-performant, low-latency, controllable speech generation.
+    - id: gemini-2-5-flash-preview-tts-paid
+      name: Gemini 2.5 Flash Preview TTS (Paid)
+      tier: Paid
+      type: Latest
+      entries:
+        - geo: US
+          unit: 1M
+          label: Input Text
+          price: 0.5
+          metric: token
+          timeFrame: usage
+          description: Input text.
+        - geo: US
+          unit: 1M
+          label: Output Audio
+          price: 10
+          metric: token
+          timeFrame: usage
+          description: Output audio.
+      description: >-
+        Our 2.5 Flash text-to-speech audio model optimized for
+        price-performant, low-latency, controllable speech generation.
+    - id: gemini-2-5-pro-preview-tts-free
+      name: Gemini 2.5 Pro Preview TTS (Free)
+      tier: Free
+      type: Latest
+      entries:
+        - geo: US
+          unit: 1M
+          label: Input
+          price: Free
+          metric: token
+          timeFrame: usage
+          description: Input token usage-based pricing.
+        - geo: US
+          unit: 1M
+          label: Output
+          price: Free
+          metric: token
+          timeFrame: usage
+          description: Output token usage-based pricing.
+      description: >-
+        Our 2.5 Pro text-to-speech audio model optimized for powerful,
+        low-latency speech generation for more natural outputs and easier to
+        steer prompts.
+    - id: gemini-2-5-pro-preview-tts-paid
+      name: Gemini 2.5 Pro Preview TTS (Paid)
+      tier: Paid
+      type: Latest
+      entries:
+        - geo: US
+          unit: 1M
+          label: Input Text
+          price: 1
+          metric: token
+          timeFrame: usage
+          description: Input text.
+        - geo: US
+          unit: 1M
+          label: Output Audio
+          price: 20
+          metric: token
+          timeFrame: usage
+          description: Output audio.
+      description: >-
+        Our 2.5 Pro text-to-speech audio model optimized for powerful,
+        low-latency speech generation for more natural outputs and easier to
+        steer prompts.
+  name: Pricing
+  type: Pricing

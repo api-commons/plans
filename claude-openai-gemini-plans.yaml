@@ -1,0 +1,359 @@
+# Plans
+# These are the plans for Claude, OpenAI, and Gemini, providing a machine-readdable version of the plans for the platform.
+
+# Claude
+- name: Plans
+  type: Plans    
+  url: https://www.anthropic.com/pricing
+  data:
+    - id: free
+      name: Free
+      entries:
+        - geo: US
+          unit: 1
+          label: User
+          limit: 1
+          price: Free
+          metric: user
+          timeFrame: month
+          description: Usage based pricing.
+      elements:
+        - name: Chat on web, iOS, Android, and on your desktop
+        - name: Generate code and visualize data
+        - name: Write, edit, and create content
+        - name: Analyze text and images
+        - name: Ability to search the web
+        - name: Unlock more from Claude with desktop extensions
+      description: Try Claude
+    - id: pro
+      name: Pro
+      entries:
+        - geo: US
+          unit: 1
+          label: User
+          limit: 1
+          price: 20
+          metric: user
+          timeFrame: month
+          description: Usage based pricing.
+      elements:
+        - name: More usage
+        - name: Access Claude Code directly in your terminal
+        - name: Access to unlimited Projects to organize chats and documents
+        - name: Access to Research
+        - name: Connect Google Workspace email, calendar, and docs
+        - name: >-
+            Connect your everyday tools in just a few clicks (with remote MCP
+            servers)
+        - name: Extended thinking for complex work
+        - name: Ability to use more Claude models
+      description: For everyday productivity.
+    - id: max
+      name: Max
+      entries:
+        - geo: US
+          unit: 1
+          label: User
+          limit: 1
+          price: 100
+          metric: user
+          timeFrame: month
+          description: Usage based pricing.
+      elements:
+        - name: Choose 5x or 20x more usage per session than Pro*
+        - name: Higher output limits for all tasks
+        - name: Early access to advanced Claude features
+        - name: Priority access at high traffic times
+      description: Get the most out of Claude.
+    - id: team
+      name: Team
+      entries:
+        - geo: US
+          unit: 1
+          label: User
+          limit: 1
+          price: 25
+          metric: user
+          timeFrame: month
+          description: Usage based pricing.
+      elements:
+        - name: More usage
+        - name: Central billing and administration
+        - name: Early access to collaboration features
+        - name: Claude Code available separately through Anthropic Console
+      description: For collaboration across organizations
+    - id: enterprise
+      name: Enterprise
+      entries:
+        - geo: US
+          unit: 1
+          label: User
+          limit: 1
+          price: Call
+          metric: user
+          timeFrame: month
+          description: For businesses operating at scale
+      elements:
+        - name: More usage
+        - name: Enhanced context window
+        - name: Single sign-on (SSO) and domain capture
+        - name: Role-based access with fine grained permissioning
+        - name: System for Cross-domain Identity Management (SCIM)
+        - name: Audit logs
+        - name: Google Docs cataloging
+        - name: Claude Code available separately through Anthropic Console
+      description: For collaboration across organizations
+
+# OpenAI
+- name: Plans
+  type: Plans
+  description: This is the description of the plans for general OpenAI usage.
+  url: https://openai.com/api/pricing/
+  data:
+    - id: free
+      name: Free
+      entries:
+        - geo: US
+          unit: 1
+          label: User
+          limit: 1
+          price: 0
+          metric: user
+          timeFrame: month
+          description: User based pricing.
+      elements:
+        - name: Access to GPT5
+        - name: Real-time data from the web with search
+        - name: >-
+            Limited access to file uploads, data analysis, image generation,
+            and voice mode
+        - name: Code edits with the ChatGPT desktop app for macOS
+        - name: Use custom GPTs
+      description: Explore how AI can help with everyday tasks
+    - id: plus
+      name: Plus
+      entries:
+        - geo: US
+          unit: 1
+          label: User
+          limit: 1
+          price: $20.00
+          metric: user
+          timeFrame: month
+          description: User based pricing.
+      elements:
+        - name: Extended access to GPT5, our flagship model
+        - name: >-
+            Extended limits on messaging, file uploads, data analysis, and
+            image generation
+        - name: Standard and advanced voice mode with video and screensharing
+        - name: Access to ChatGPT agent
+        - name: Create and use projects, tasks, and custom GPTs
+        - name: Limited access to Sora video generation
+        - name: Opportunities to test new features
+      description: Level up productivity and creativity with expanded access
+    - id: pro
+      name: Pro
+      entries:
+        - geo: US
+          unit: 1
+          label: User
+          limit: 1
+          price: $200.00
+          metric: user
+          timeFrame: month
+          description: User based pricing.
+      elements:
+        - name: Unlimited access to GPT5
+        - name: >-
+            Access to GPT5 pro, which uses more compute for the best answers
+            to the hardest questions
+        - name: >-
+            Unlimited access to advanced voice, with higher limits for video
+            and screensharing
+        - name: >-
+            Access to OpenAI o3pro, which uses more compute for the best
+            answers to the hardest questions
+        - name: Extended access to ChatGPT agent
+        - name: Extended access to Sora video generation
+        - name: Access to research preview of Codex agent
+      description: Get the best of OpenAI with the highest level of access
+    - id: team
+      name: Team
+      entries:
+        - geo: US
+          unit: 1
+          label: User
+          limit: 1
+          price: $25.00
+          metric: user
+          timeFrame: month
+          description: User based pricing.
+      elements:
+        - name: >-
+            Unlimited GPT5 messages, with generous access to GPT5 thinking,
+            and access to GPT5 proplus the flexibility to add credits as
+            needed
+        - name: >-
+            A secure, dedicated workspace with essential admin controls, SAML
+            SSO, and MFA
+        - name: >-
+            Team data is excluded from training by default, with encryption at
+            rest and in transit. Learn more`
+        - name: >-
+            Support for compliance with GDPR, CCPA, and other privacy laws.
+            Aligned with CSA STAR` and SOC 2 Type 2 Trust Services Criteria.
+        - name: >-
+            Connectors to apps for more personalized answersGoogle Drive,
+            SharePoint, GitHub, Notion, and more
+        - name: >-
+            Business features like data analysis, record mode, canvas,
+            projects, tasks, custom workspace GPTs, and deep research
+        - name: >-
+            Includes access to Codex and ChatGPT agent for reasoning and
+            taking action across your documents, tools, and codebases
+      description: A secure, collaborative workspace for startups and growing teams
+    - id: enterprise
+      name: Enterprise
+      entries:
+        - geo: US
+          unit: 1
+          label: User
+          limit: 1
+          price: Contact
+          metric: user
+          timeFrame: month
+          description: User based pricing.
+      elements:
+        - name: >-
+            Expanded context window that supports longer inputs and larger
+            files
+        - name: >-
+            Enterprise-level security and controls, including SCIM, user
+            analytics, domain verification, and role-based access controls
+        - name: >-
+            Advanced data privacy with custom data retention policies,
+            encryption at rest and in transit, and no training on your
+            business data by default. Learn more`
+        - name: Support for data residency in seven regions
+        - name: >-
+            24/7 priority support, SLAs, custom legal terms, and access to AI
+            advisors for eligible customers
+        - name: >-
+            Built for scale with volume discounts, invoicing and ACH billing,
+            and support for unlimited users
+      description: Enterprise-grade AI, security, and support at scale
+
+# Plans
+- url: https://gemini.google/subscriptions/
+  data:
+    - id: free
+      name: Free
+      entries:
+        - geo: US
+          unit: 1
+          label: User
+          limit: 1
+          price: Free
+          metric: user
+          timeFrame: month
+          description: Usage based pricing.
+      elements:
+        - name: Access to 2.5 Flash
+        - name: Limited access to 2.5 Pro
+        - name: Image Generation with Imagen 4
+        - name: Deep Research
+        - name: Gemini Live
+        - name: Canvas
+        - name: Gems
+        - name: Generate and animate images with Imagen 4 and Veo 2
+        - name: Research and writing assistant
+        - name: 15 GB of total storage for Photos, Drive, and Gmail
+      description: >-
+        Get everyday help from Google AI to tackle tasks at work, school or
+        home.
+    - id: pro
+      name: Google AI Pro
+      name: Plans
+      type: Plans      
+      entries:
+        - geo: US
+          unit: 1
+          label: User
+          price: 19.99
+          metric: user
+          timeFrame: month
+          description: Usage based pricing.
+      elements:
+        - name: Access to 2.5 Flash
+        - name: Limited access to 2.5 Pro
+        - name: Image Generation with Imagen 4
+        - name: Deep Research
+        - name: Gemini Live
+        - name: Canvas
+        - name: Gems
+        - name: Generate and animate images with Imagen 4 and Veo 2
+        - name: Research and writing assistant
+        - name: 15 GB of total storage for Photos, Drive, and Gmail
+        - name: >-
+            Get more access to our most capable model 2.5 Pro, Deep Research
+            on 2.5 Pro and unlock video generation with Veo 3 Fast, our video
+            generation model that maintains high-quality while optimizing for
+            speed
+        - name: >-
+            Access our AI filmmaking tool custom built with Veo 3 Fast to
+            create cinematic scenes and stories
+        - name: Higher limits for image-to-video-creation with Veo 2
+        - name: >-
+            Get access to Gemini 2.5 Pro model and Deep Search in AI Mode,
+            plus expanded access to AI-powered calling for local business
+            pricing (US only)
+        - name: >-
+            Higher task limits when using Jules, our asynchronous coding agent
+            for software development
+        - name: >-
+            Research and writing assistant with 5x more Audio Overviews,
+            notebooks, and more
+        - name: Access Gemini directly in Google apps, Gmail, Docs, Vids, and more
+        - name: our personal assistant to browse the web
+        - name: early access
+        - name: 2 TB of total storage for Photos, Drive, and Gmail
+      description: >-
+        Get more access to new and powerful features to boost your
+        productivity and creativity.
+    - id: pro
+      name: Google AI Ultra
+      entries:
+        - geo: US
+          unit: 1
+          label: User
+          price: 249.99
+          metric: user
+          timeFrame: month
+          description: Usage based pricing.
+      elements:
+        - name: >-
+            Highest level of access to Veo 3, our state-of-the-art video
+            generation model, and access to Gemini 2.5 Deep Think, our most
+            advanced reasoning model
+        - name: >-
+            Highest level of access to our AI filmmaking tool with access to
+            Veo 3 and premium features like ingredients to video
+        - name: Highest limits for image-to-video creation with Veo 2
+        - name: >-
+            Highest limits to Gemini 2.5 Pro model and Deep Search in AI Mode,
+            plus AI-powered calling for local business pricing (US only)
+        - name: >-
+            Highest task limits when using Jules, our asynchronous coding
+            agent for software development
+        - name: Highest limits and best model capabilities (later this year)
+        - name: >-
+            Highest limits to Gemini directly in Google apps, Gmail, Docs,
+            Vids, and more
+        - name: Streamline tasks with an agentic research prototype
+        - name: early access
+        - name: YouTube ad-free, offline, and in the background
+        - name: 30 TB of total storage for Photos, Drive, and Gmail
+      description: >-
+        Unlock the highest level of access to the best of Google AI and
+        exclusive features.

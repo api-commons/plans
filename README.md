@@ -56,3 +56,14 @@ Plans are one of a growing set of API Commons building blocks that describe the 
 ## Support
 
 This schema is managed using the issues on this GitHub repository. It is in an early stage of development and moving regularly as it is applied to profiling existing APIs and describing new ones. If there is a feature you'd like to see, or you have questions, please submit an issue or email kin@apievangelist.com.
+
+## Part of API Commons
+
+A machine-readable building block from **[API Commons](https://apicommons.org)** — open specifications and schemas for the APIs you produce and consume. See all building blocks and tools at **[apicommons.org](https://apicommons.org)** and the tools at **[apicommons.org/tools](https://apicommons.org/tools/)**.
+
+**Related building blocks**
+- [tiers](https://github.com/api-commons/tiers) — the access/service tiers available for an API
+- [rate-limits](https://github.com/api-commons/rate-limits) — the rate limits that constrain API access
+- [use-cases](https://github.com/api-commons/use-cases) — how an API is actually put to work, tied to its operations
+- [road-map](https://github.com/api-commons/road-map) — publish an API's roadmap in a machine-readable way
+- [change-log](https://github.com/api-commons/change-log) — publish an API's changelog in a machine-readable way
